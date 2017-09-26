@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/jasmine-1.1.0/jasmine-html.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">lib/jasmine-1.1.0/</a> jasmine-html.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/99</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/98</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter = <span class="fstat-no" title="function not covered" >function(doc) {</span></span>
+<span class="cstat-no" title="statement not covered" >  this.document = doc || document;</span>
+<span class="cstat-no" title="statement not covered" >  this.suiteDivs = {};</span>
+<span class="cstat-no" title="statement not covered" >  this.logRunningSpecs = false;</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.createDom = <span class="fstat-no" title="function not covered" >function(type, attrs, childrenVarArgs) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var el = document.createElement(type);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  for (var i = 2; i &lt; arguments.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    var child = arguments[i];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (typeof child === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >      el.appendChild(document.createTextNode(child));</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      if (child) { <span class="cstat-no" title="statement not covered" >el.appendChild(child); </span>}</span>
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  for (var attr in attrs) {</span>
+<span class="cstat-no" title="statement not covered" >    if (attr == "className") {</span>
+<span class="cstat-no" title="statement not covered" >      el[attr] = attrs[attr];</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      el.setAttribute(attr, attrs[attr]);</span>
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return el;</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.reportRunnerStarting = <span class="fstat-no" title="function not covered" >function(runner) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var showPassed, showSkipped;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.outerDiv = this.createDom('div', { className: 'jasmine_reporter' },</span>
+      this.createDom('div', { className: 'banner' },
+        this.createDom('div', { className: 'logo' },
+            this.createDom('span', { className: 'title' }, "Jasmine"),
+            this.createDom('span', { className: 'version' }, runner.env.versionString())),
+        this.createDom('div', { className: 'options' },
+            "Show ",
+            showPassed = this.createDom('input', { id: "__jasmine_TrivialReporter_showPassed__", type: 'checkbox' }),
+            this.createDom('label', { "for": "__jasmine_TrivialReporter_showPassed__" }, " passed "),
+            showSkipped = this.createDom('input', { id: "__jasmine_TrivialReporter_showSkipped__", type: 'checkbox' }),
+            this.createDom('label', { "for": "__jasmine_TrivialReporter_showSkipped__" }, " skipped")
+            )
+          ),
+&nbsp;
+      this.runnerDiv = this.createDom('div', { className: 'runner running' },
+          this.createDom('a', { className: 'run_spec', href: '?' }, "run all"),
+          this.runnerMessageSpan = this.createDom('span', {}, "Running..."),
+          this.finishedAtSpan = this.createDom('span', { className: 'finished-at' }, ""))
+      );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.document.body.appendChild(this.outerDiv);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var suites = runner.suites();</span>
+<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; suites.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    var suite = suites[i];</span>
+<span class="cstat-no" title="statement not covered" >    var suiteDiv = this.createDom('div', { className: 'suite' },</span>
+        this.createDom('a', { className: 'run_spec', href: '?spec=' + encodeURIComponent(suite.getFullName()) }, "run"),
+        this.createDom('a', { className: 'description', href: '?spec=' + encodeURIComponent(suite.getFullName()) }, suite.description));
+<span class="cstat-no" title="statement not covered" >    this.suiteDivs[suite.id] = suiteDiv;</span>
+<span class="cstat-no" title="statement not covered" >    var parentDiv = this.outerDiv;</span>
+<span class="cstat-no" title="statement not covered" >    if (suite.parentSuite) {</span>
+<span class="cstat-no" title="statement not covered" >      parentDiv = this.suiteDivs[suite.parentSuite.id];</span>
+    }
+<span class="cstat-no" title="statement not covered" >    parentDiv.appendChild(suiteDiv);</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.startedAt = new Date();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var self = this;</span>
+<span class="cstat-no" title="statement not covered" >  showPassed.onclick = <span class="fstat-no" title="function not covered" >function(evt) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (showPassed.checked) {</span>
+<span class="cstat-no" title="statement not covered" >      self.outerDiv.className += ' show-passed';</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      self.outerDiv.className = self.outerDiv.className.replace(/ show-passed/, '');</span>
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  showSkipped.onclick = <span class="fstat-no" title="function not covered" >function(evt) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (showSkipped.checked) {</span>
+<span class="cstat-no" title="statement not covered" >      self.outerDiv.className += ' show-skipped';</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      self.outerDiv.className = self.outerDiv.className.replace(/ show-skipped/, '');</span>
+    }
+  };
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.reportRunnerResults = <span class="fstat-no" title="function not covered" >function(runner) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var results = runner.results();</span>
+<span class="cstat-no" title="statement not covered" >  var className = (results.failedCount &gt; 0) ? "runner failed" : "runner passed";</span>
+<span class="cstat-no" title="statement not covered" >  this.runnerDiv.setAttribute("class", className);</span>
+  //do it twice for IE
+<span class="cstat-no" title="statement not covered" >  this.runnerDiv.setAttribute("className", className);</span>
+<span class="cstat-no" title="statement not covered" >  var specs = runner.specs();</span>
+<span class="cstat-no" title="statement not covered" >  var specCount = 0;</span>
+<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; specs.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    if (this.specFilter(specs[i])) {</span>
+<span class="cstat-no" title="statement not covered" >      specCount++;</span>
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  var message = "" + specCount + " spec" + (specCount == 1 ? "" : "s" ) + ", " + results.failedCount + " failure" + ((results.failedCount == 1) ? "" : "s");</span>
+<span class="cstat-no" title="statement not covered" >  message += " in " + ((new Date().getTime() - this.startedAt.getTime()) / 1000) + "s";</span>
+<span class="cstat-no" title="statement not covered" >  this.runnerMessageSpan.replaceChild(this.createDom('a', { className: 'description', href: '?'}, message), this.runnerMessageSpan.firstChild);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.finishedAtSpan.appendChild(document.createTextNode("Finished at " + new Date().toString()));</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.reportSuiteResults = <span class="fstat-no" title="function not covered" >function(suite) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var results = suite.results();</span>
+<span class="cstat-no" title="statement not covered" >  var status = results.passed() ? 'passed' : 'failed';</span>
+<span class="cstat-no" title="statement not covered" >  if (results.totalCount === 0) { // todo: change this to check results.skipped</span>
+<span class="cstat-no" title="statement not covered" >    status = 'skipped';</span>
+  }
+<span class="cstat-no" title="statement not covered" >  this.suiteDivs[suite.id].className += " " + status;</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.reportSpecStarting = <span class="fstat-no" title="function not covered" >function(spec) {</span></span>
+<span class="cstat-no" title="statement not covered" >  if (this.logRunningSpecs) {</span>
+<span class="cstat-no" title="statement not covered" >    this.log('&gt;&gt; Jasmine Running ' + spec.suite.description + ' ' + spec.description + '...');</span>
+  }
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.reportSpecResults = <span class="fstat-no" title="function not covered" >function(spec) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var results = spec.results();</span>
+<span class="cstat-no" title="statement not covered" >  var status = results.passed() ? 'passed' : 'failed';</span>
+<span class="cstat-no" title="statement not covered" >  if (results.skipped) {</span>
+<span class="cstat-no" title="statement not covered" >    status = 'skipped';</span>
+  }
+<span class="cstat-no" title="statement not covered" >  var specDiv = this.createDom('div', { className: 'spec '  + status },</span>
+      this.createDom('a', { className: 'run_spec', href: '?spec=' + encodeURIComponent(spec.getFullName()) }, "run"),
+      this.createDom('a', {
+        className: 'description',
+        href: '?spec=' + encodeURIComponent(spec.getFullName()),
+        title: spec.getFullName()
+      }, spec.description));
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var resultItems = results.getItems();</span>
+<span class="cstat-no" title="statement not covered" >  var messagesDiv = this.createDom('div', { className: 'messages' });</span>
+<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; resultItems.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    var result = resultItems[i];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (result.type == 'log') {</span>
+<span class="cstat-no" title="statement not covered" >      messagesDiv.appendChild(this.createDom('div', {className: 'resultMessage log'}, result.toString()));</span>
+    } else <span class="cstat-no" title="statement not covered" >if (result.type == 'expect' &amp;&amp; result.passed &amp;&amp; !result.passed()) {</span>
+<span class="cstat-no" title="statement not covered" >      messagesDiv.appendChild(this.createDom('div', {className: 'resultMessage fail'}, result.message));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (result.trace.stack) {</span>
+<span class="cstat-no" title="statement not covered" >        messagesDiv.appendChild(this.createDom('div', {className: 'stackTrace'}, result.trace.stack));</span>
+      }
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (messagesDiv.childNodes.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >    specDiv.appendChild(messagesDiv);</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.suiteDivs[spec.suite.id].appendChild(specDiv);</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.log = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >  var console = jasmine.getGlobal().console;</span>
+<span class="cstat-no" title="statement not covered" >  if (console &amp;&amp; console.log) {</span>
+<span class="cstat-no" title="statement not covered" >    if (console.log.apply) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log.apply(console, arguments);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      console.log(arguments); </span>// ie fix: console.log.apply doesn't exist on ie
+    }
+  }
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.getLocation = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >  return this.document.location;</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.TrivialReporter.prototype.specFilter = <span class="fstat-no" title="function not covered" >function(spec) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var paramMap = {};</span>
+<span class="cstat-no" title="statement not covered" >  var params = this.getLocation().search.substring(1).split('&amp;');</span>
+<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; params.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    var p = params[i].split('=');</span>
+<span class="cstat-no" title="statement not covered" >    paramMap[decodeURIComponent(p[0])] = decodeURIComponent(p[1]);</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (!paramMap.spec) {</span>
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  return spec.getFullName().indexOf(paramMap.spec) === 0;</span>
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Sep 25 2017 11:40:34 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/jasmine-ajax/mock-ajax.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">lib/jasmine-ajax/</a> mock-ajax.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/72</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ Jasmine-Ajax : a set of helpers for testing AJAX requests under the Jasmine
+ BDD framework for JavaScript.
+&nbsp;
+ Supports both Prototype.js and jQuery.
+&nbsp;
+ http://github.com/pivotal/jasmine-ajax
+&nbsp;
+ Jasmine Home page: http://pivotal.github.com/jasmine
+&nbsp;
+ Copyright (c) 2008-2010 Pivotal Labs
+&nbsp;
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+&nbsp;
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+&nbsp;
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+&nbsp;
+ */
+&nbsp;
+// Jasmine-Ajax interface
+<span class="cstat-no" title="statement not covered" >var ajaxRequests = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function mostRecentAjaxRequest() {</span></span>
+<span class="cstat-no" title="statement not covered" >  if (ajaxRequests.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >    return ajaxRequests[ajaxRequests.length - 1];</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    return null;</span>
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function clearAjaxRequests() {</span></span>
+<span class="cstat-no" title="statement not covered" >  ajaxRequests = [];</span>
+}
+&nbsp;
+// Fake XHR for mocking Ajax Requests &amp; Responses
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function FakeXMLHttpRequest() {</span></span>
+<span class="cstat-no" title="statement not covered" >  var extend = Object.extend || $.extend;</span>
+<span class="cstat-no" title="statement not covered" >  extend(this, {</span>
+    requestHeaders: {},
+&nbsp;
+    open: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this.method = arguments[0];</span>
+<span class="cstat-no" title="statement not covered" >      this.url = arguments[1];</span>
+<span class="cstat-no" title="statement not covered" >      this.readyState = 1;</span>
+    },
+&nbsp;
+    setRequestHeader: <span class="fstat-no" title="function not covered" >function(header, value) {</span>
+<span class="cstat-no" title="statement not covered" >      this.requestHeaders[header] = value;</span>
+    },
+&nbsp;
+    abort: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this.readyState = 0;</span>
+    },
+&nbsp;
+    readyState: 0,
+&nbsp;
+    onreadystatechange: <span class="fstat-no" title="function not covered" >function(isTimeout) {</span>
+    },
+&nbsp;
+    status: null,
+&nbsp;
+    send: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >      this.params = data;</span>
+<span class="cstat-no" title="statement not covered" >      this.readyState = 2;</span>
+    },
+&nbsp;
+    getResponseHeader: <span class="fstat-no" title="function not covered" >function(name) {</span>
+<span class="cstat-no" title="statement not covered" >      return this.responseHeaders[name];</span>
+    },
+&nbsp;
+    getAllResponseHeaders: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var responseHeaders = [];</span>
+<span class="cstat-no" title="statement not covered" >      for (var i in this.responseHeaders) {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.responseHeaders.hasOwnProperty(i)) {</span>
+<span class="cstat-no" title="statement not covered" >          responseHeaders.push(i + ': ' + this.responseHeaders[i]);</span>
+        }
+      }
+<span class="cstat-no" title="statement not covered" >      return responseHeaders.join('\r\n');</span>
+    },
+&nbsp;
+    responseText: null,
+&nbsp;
+    response: <span class="fstat-no" title="function not covered" >function(response) {</span>
+<span class="cstat-no" title="statement not covered" >      this.status = response.status;</span>
+<span class="cstat-no" title="statement not covered" >      this.responseText = response.responseText || "";</span>
+<span class="cstat-no" title="statement not covered" >      this.readyState = 4;</span>
+<span class="cstat-no" title="statement not covered" >      this.responseHeaders = response.responseHeaders ||</span>
+      {"Content-type": response.contentType || "application/json" };
+      // uncomment for jquery 1.3.x support
+      // jasmine.Clock.tick(20);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.onreadystatechange();</span>
+    },
+    responseTimeout: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this.readyState = 4;</span>
+<span class="cstat-no" title="statement not covered" >      jasmine.Clock.tick(jQuery.ajaxSettings.timeout || 30000);</span>
+<span class="cstat-no" title="statement not covered" >      this.onreadystatechange('timeout');</span>
+    }
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return this;</span>
+}
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >jasmine.Ajax = {</span>
+&nbsp;
+  isInstalled: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    return jasmine.Ajax.installed == true;</span>
+  },
+&nbsp;
+  assertInstalled: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    if (!jasmine.Ajax.isInstalled()) {</span>
+<span class="cstat-no" title="statement not covered" >      throw new Error("Mock ajax is not installed, use jasmine.Ajax.useMock()")</span>
+    }
+  },
+&nbsp;
+  useMock: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    if (!jasmine.Ajax.isInstalled()) {</span>
+<span class="cstat-no" title="statement not covered" >      var spec = jasmine.getEnv().currentSpec;</span>
+<span class="cstat-no" title="statement not covered" >      spec.after(jasmine.Ajax.uninstallMock);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      jasmine.Ajax.installMock();</span>
+    }
+  },
+&nbsp;
+  installMock: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof jQuery != 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >      jasmine.Ajax.installJquery();</span>
+    } else <span class="cstat-no" title="statement not covered" >if (typeof Prototype != 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >      jasmine.Ajax.installPrototype();</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      throw new Error("jasmine.Ajax currently only supports jQuery and Prototype");</span>
+    }
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.installed = true;</span>
+  },
+&nbsp;
+  installJquery: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.mode = 'jQuery';</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.real = jQuery.ajaxSettings.xhr;</span>
+<span class="cstat-no" title="statement not covered" >    jQuery.ajaxSettings.xhr = jasmine.Ajax.jQueryMock;</span>
+&nbsp;
+  },
+&nbsp;
+  installPrototype: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.mode = 'Prototype';</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.real = Ajax.getTransport;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    Ajax.getTransport = jasmine.Ajax.prototypeMock;</span>
+  },
+&nbsp;
+  uninstallMock: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.assertInstalled();</span>
+<span class="cstat-no" title="statement not covered" >    if (jasmine.Ajax.mode == 'jQuery') {</span>
+<span class="cstat-no" title="statement not covered" >      jQuery.ajaxSettings.xhr = jasmine.Ajax.real;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (jasmine.Ajax.mode == 'Prototype') {</span>
+<span class="cstat-no" title="statement not covered" >      Ajax.getTransport = jasmine.Ajax.real;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.reset();</span>
+  },
+&nbsp;
+  reset: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.installed = false;</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.mode = null;</span>
+<span class="cstat-no" title="statement not covered" >    jasmine.Ajax.real = null;</span>
+  },
+&nbsp;
+  jQueryMock: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    var newXhr = new FakeXMLHttpRequest();</span>
+<span class="cstat-no" title="statement not covered" >    ajaxRequests.push(newXhr);</span>
+<span class="cstat-no" title="statement not covered" >    return newXhr;</span>
+  },
+&nbsp;
+  prototypeMock: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    return new FakeXMLHttpRequest();</span>
+  },
+&nbsp;
+  installed: false,
+  mode: null
+}
+&nbsp;
+&nbsp;
+// Jasmine-Ajax Glue code for Prototype.js
+<span class="cstat-no" title="statement not covered" >if (typeof Prototype != 'undefined' &amp;&amp; Ajax &amp;&amp; Ajax.Request) {</span>
+<span class="cstat-no" title="statement not covered" >  Ajax.Request.prototype.originalRequest = Ajax.Request.prototype.request;</span>
+<span class="cstat-no" title="statement not covered" >  Ajax.Request.prototype.request = <span class="fstat-no" title="function not covered" >function(url) {</span></span>
+<span class="cstat-no" title="statement not covered" >    this.originalRequest(url);</span>
+<span class="cstat-no" title="statement not covered" >    ajaxRequests.push(this);</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  Ajax.Request.prototype.response = <span class="fstat-no" title="function not covered" >function(responseOptions) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return this.transport.response(responseOptions);</span>
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Sep 25 2017 11:40:34 GMT+0200 (CEST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
